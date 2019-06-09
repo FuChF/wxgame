@@ -1,4 +1,4 @@
-import BackGround from '/background/background'
+
 
 const canvas = wx.createCanvas()
 const ctx = canvas.getContext('2d')
