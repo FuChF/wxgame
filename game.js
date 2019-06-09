@@ -1,20 +1,9 @@
-
-
 const canvas = wx.createCanvas()
 const ctx = canvas.getContext('2d')
 var score = 0
 var speed = 0
 const screenWidth = window.innerWidth
 const screenHeight = window.innerHeight
-
-
-
-
-
-
-
-
-
 
 
 function renderGameScore(ctx, score) {
@@ -27,8 +16,6 @@ function renderGameScore(ctx, score) {
     30
   )
 }
-
-
 
 
 function randomNum(min, max) {
@@ -62,8 +49,6 @@ function fn(min, max) {
 fn(0, 200);
 
 
-
-
 const context = canvas.getContext('2d')// 创建一个 2d context
 const context1 = canvas.getContext('2d')
 const bg = wx.createImage()
@@ -74,8 +59,6 @@ function setup() {
 
   bg.onload = function () {
     context.drawImage(bg, 0, 0, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-
-
 
     console.log(0);
   }
@@ -108,11 +91,6 @@ function drawRect(x, y) {
 
 
 
-
-
-
-
-
 const image = wx.createImage()
 let imgX = canvas.width / 3
 let imgY = canvas.height / 2 - 26
@@ -120,8 +98,6 @@ image.onload = function () {
   context.drawImage(image, imgX, imgY)
 }
 image.src = 'images/bird.png'
-
-
 
 
 let rectX = canvas.width
@@ -172,8 +148,6 @@ var interval = setInterval(function test() {
     })
   }
 
-
-
   if (imgY + 26 >= canvas.height||imgY<=0) {
     clearInterval(interval);                 //停止循环进行
     wx.showModal({
@@ -199,8 +173,6 @@ var interval = setInterval(function test() {
           interval = setInterval(test, 16);
         }
       }
-
-
     })
   }
 
